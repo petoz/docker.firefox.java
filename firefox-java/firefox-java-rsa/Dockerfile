@@ -5,8 +5,8 @@
 
 
 
-from	ubuntu:14.04.3
-#from	ubuntu:16.10
+#from	ubuntu:14.04.3
+from	ubuntu:16.04
 #from	ubuntu:17.04
 # make sure the package repository is up to date
 #run	echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
@@ -18,7 +18,7 @@ run	apt-get update
 run apt-cache search openjdk
 run apt-cache search tzdata
 run apt-cache search tzdata-j
-run apt-get install -y x11vnc xvfb firefox openbox icedtea-plugin icedtea-netx openjdk-7-jre openjdk-7-jre-headless tzdata-java tzdata
+run apt-get install -y x11vnc xvfb firefox openbox icedtea-plugin icedtea-netx 
 run	mkdir ~/.vnc
 #add	nepi-jano-4.5.firefox.zip .	
 COPY	mozilla.tar.gz /root/
